@@ -17,7 +17,7 @@ const UserTable = (props) => (
                         <td>{user.username}</td>
                         <td>
                             <button className="button muted-button">Edit</button>
-                            <button className="button muted-button">Delete</button>
+                            <button className="button muted-button" onClick={() => props.deleteUserProps(user.id)}>Delete</button>
                         </td>
                     </tr>
                 ))
@@ -27,7 +27,7 @@ const UserTable = (props) => (
                     </tr>
                 )}
         </tbody>
-    </table>
+    </table >
 )
 
 export default UserTable
